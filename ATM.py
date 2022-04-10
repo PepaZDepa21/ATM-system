@@ -22,7 +22,6 @@ while True:
         password = input("Enter your password: ")
         customer = Customer_Insert(fname, lname, password, 0)
         SDK.new_customer(customer)
-        os.system("CLS")    
     
     elif op == 2:
         os.system("CLS")
@@ -35,8 +34,6 @@ while True:
         else:
             SDK.withdraw(cust_id)
             
-        
-        
     elif op == 3:
         os.system("CLS")
         num = int(input("Enter your id: "))
@@ -44,6 +41,7 @@ while True:
         customer = Customer_Login(num, password)
         SDK.login(customer)
         
-    
     elif op == 4:
-        break  
+        break 
+    
+    os.system("CLS") 
