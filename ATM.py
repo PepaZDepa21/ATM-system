@@ -24,18 +24,13 @@ while True:
         SDK.new_customer(customer)
     
     elif op == 2:
-        os.system("CLS")
         SDK.withdraw()
-      
-            
+             
     elif op == 3:
-        os.system("CLS")
-        num = int(input("Enter your id: "))
-        password = input("Enter your password: ")
-        customer = Customer_Login(num, password)
-        SDK.login(customer)
+        SDK.insert()
         
     elif op == 4:
-        break 
-    
-    os.system("CLS") 
+        exit = SDK.turn_off()
+        if exit:
+            continue
+        break
