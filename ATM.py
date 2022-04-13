@@ -1,6 +1,6 @@
 import os
 import SDK
-from Customer import Customer, Customer_Insert, Customer_Login
+from Customer import Customer_Insert, Customer_Login
 
 option = """
 Choose your option
@@ -25,14 +25,8 @@ while True:
     
     elif op == 2:
         os.system("CLS")
-        num = int(input("Enter your id: "))
-        password = input("Enter your password: ")
-        customer = Customer_Login(num, password)
-        cust_id = SDK.login(customer)
-        if cust_id == 0:
-            continue
-        else:
-            SDK.withdraw(cust_id)
+        SDK.withdraw()
+      
             
     elif op == 3:
         os.system("CLS")
