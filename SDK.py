@@ -1,6 +1,5 @@
 import sqlite3
 import Customer
-from time import sleep
 import os
 
 def cursor():
@@ -26,7 +25,10 @@ def new_customer(customer):
     os.system("CLS")
     
 def login():
-    cust = int(input("Enter your id: "))
+    try:
+        cust = int(input("Enter your id: "))
+    except:
+        print("Wrong symbol! You have to enter number!")
     c = cursor()
     c.execute('SELECT password FROM customer WHERE id = ?', (cust,))
     password = c.fetchone()

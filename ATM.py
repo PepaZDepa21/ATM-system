@@ -14,7 +14,10 @@ os.system("CLS")
 
 while True:
     print(option)
-    op = int(input())
+    try:
+        op = int(input())
+    except:
+        print("Wrong symbol! You have to enter nuber between 1 and 4!")
     if op == 1:
         os.system("CLS")
         fname = input("Your first name: ")
@@ -34,3 +37,5 @@ while True:
         if exit:
             continue
         break
+    else:
+        print("You have to enter number between 1 and 4!")
